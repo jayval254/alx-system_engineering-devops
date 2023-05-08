@@ -3,15 +3,19 @@
 # display hours from 0 to 12
 # display minutes from 1 to 59
 
-hour=0
-while [ $hour -le 12 ]
+i=0
+h=0
+m=0
+while [ $i -le 779 ]
 do
-    min=1
-    echo "Hour: $hour"
-    while [ $min -lt 60 ]
-    do
-        echo "$min"
-        (( min++ ))
-    done
-    (( hour++ ))
+    if(( i % 60 == 0 ))
+    then
+      echo "Hour: $h"
+      m=0
+      ((h++))
+    else
+      echo "$m"
+    fi
+    ((i++))
+    ((m++))
 done
