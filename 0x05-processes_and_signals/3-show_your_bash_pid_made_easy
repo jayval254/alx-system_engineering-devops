@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that displays a list of processes whose name contain the word bash
+
+pgrep bash -l
