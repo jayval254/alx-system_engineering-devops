@@ -6,12 +6,12 @@ mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
 echo "Hello World!" > /etc/nginx/html/index.html
 printf %s "server {
-    listen 80;
+    listen 80 default_server;
     listen [::]:80 default_server;
     root   /etc/nginx/html;
-    index  index.html index.htm;
+    index  index.html;
     location /redirect_me {
-        return 301 http://example.com/;
+        return 301 'https://www.youtube.com/watch?v=axlUv9evU2k';
     }
 }" > /etc/nginx/sites-available/default
 
