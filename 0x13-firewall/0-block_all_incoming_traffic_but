@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+# Configure ufw (Firewall)
+
 sudo ufw enable
 sudo ufw allow 22
 sudo ufw allow 443
