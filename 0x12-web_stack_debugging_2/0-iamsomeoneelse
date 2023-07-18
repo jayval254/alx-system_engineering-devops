@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 # runs whoami in the server
-sudo -u "$1" whoami
+# Get the username provided as an argument
+
+username="$1"
+
+# Run the `whoami` command under the specified user
+su -c "whoami" "$username"
