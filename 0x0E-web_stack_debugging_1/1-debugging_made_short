@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # reconfigure nginx to run on all ipv4's port 80
-
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
 service nginx restart
 pkill -o nginx
