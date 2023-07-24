@@ -23,6 +23,6 @@ if __name__ == '__main__':
             info["task"] = task.get('title')
             etasks[eid].append(info)
 
-    with open('{}.json'.format(eid), 'w') as f:
+    with open('{}.json'.format(eid), 'w') as json_file:
         jsn = json.dumps(etasks)
-        f.write(jsn)
+        json_file.write(jsn)
